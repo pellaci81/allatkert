@@ -10,13 +10,18 @@ $fejlec = array(
 	'motto' => 'Fedezd fel a világunkat'
 );
 
+$video = array(
+    'videoforras' => 'zoo_5mp.mp4',
+    'videoalt' => 'video'
+);
+
 $lablec = array(
     'copyright' => 'Copyright '.date("Y").'.',
     'ceg' => 'Nyíregyházi Állatpark Nonprofit Kft. (Sosto Zoo)'
 );
 
 $oldalak = array(
-	'/' => array('fajl' => 'cimlap', 'szoveg' => 'Címlap'),
+	'/' => array('fajl' => 'cimlap', 'szoveg' => 'Főoldal'),
 	'bemutatkozas' => array('fajl' => 'bemutatkozas', 'szoveg' => 'Bemutatkozás'),
     'elerhetoseg' => array('fajl' => 'elerhetoseg', 'szoveg' => 'Elérhetőség'),
 	'kapcsolat' => array('fajl' => 'kapcsolat', 'szoveg' => 'Kapcsolat'),

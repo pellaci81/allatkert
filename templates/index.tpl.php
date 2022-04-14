@@ -8,6 +8,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<title><?= $ablakcim['cim'] . ( (isset($ablakcim['mottó'])) ? ('|' . $ablakcim['mottó']) : '' ) ?></title>
     <link rel="stylesheet" href="./styles/stilus.css" type="text/css">
+    <link rel="icon" type="image/png" href="https://www.sostozoo.hu/favicon-32x32.png" sizes="32x32">
 	<?php if(file_exists('./styles/'.$keres['fajl'].'.css')) { ?><link rel="stylesheet" href="./styles/<?= $keres['fajl']?>.css" type="text/css"><?php } ?>
 </head>
 <body>
@@ -15,7 +16,7 @@
         <div class="logo">
 
             <h1></h1>
-            
+
             <?php if (isset($fejlec['motto'])) { ?><h2><?= $fejlec['motto'] ?></h2><?php } ?>
         </div>
 
