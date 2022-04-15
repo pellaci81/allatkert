@@ -34,7 +34,7 @@ if(file_exists('./login/'.$keres['fajl'].'.php')) { include("./login/{$keres['fa
         <div class="container-fluid">
             <div class="navbar-header">
 
-                <a class="navbar-brand" href="#"><?= $fejlec['cim'] ?></a>
+                <a class="navbar-brand" href="?oldal=bemutatkozas"><?= $fejlec['cim'] ?></a>
             </div>
             <ul class="nav navbar-nav">
 
