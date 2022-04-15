@@ -8,7 +8,7 @@
         <br>&nbsp;
       </fieldset>
     </form>
-    <h3>Regisztrálja magát, ha még nem felhasználó!</h2>
+    <h3>Regisztrálja magát, ha még nem felhasználó!</h3>
     <form action = "?oldal=regisztral" method = "post">
       <fieldset>
         <legend>Regisztráció</legend>
