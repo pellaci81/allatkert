@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-	</head>
+
 	<body>
+    <div>
 <?php
 	//szerver oldali ellenőrzés
 
@@ -73,6 +72,6 @@
     <p><?php echo 'Név: ' . $_POST['nev'];?></p>
     <p><?php echo 'Tárgy: ' . $_POST['targy'];?></p>
     <p><?php echo 'Szöveg: ' . $_POST['szoveg'];?></p>
-
+    </div>
 	</body>
 </html>

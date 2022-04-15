@@ -1,0 +1,90 @@
+header {
+    border-radius: 10px;
+
+    background-image: url('../images/jungle_fade.jpg');
+
+
+    padding: 10px;
+    margin: 10px;
+
+}
+
+body {
+    background-image: url('../images/tappancs_tapeta.jpg');
+}
+div#center {
+    margin: auto;
+
+}
+
+div#wrapper {
+
+    margin: 10px;
+}
+
+aside {
+    display: table-cell;
+    vertical-align: top;
+}
+
+nav {
+    margin: 0px 10px 0px 10px;
+    top: 0px;
+    border-radius: 10px;
+    background-color: #FF6600;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 5px 0px;
+}
+
+nav ul li {
+    padding: 0px 15px;;
+}
+
+nav ul li.active {
+    border-right: 5px solid blue;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: blue;
+}
+
+div#content {
+
+
+    display: table-cell;
+
+    border-radius: 10px;
+    background-color: #99FFCC;
+    background-image: url('../images/tappancs_tapeta.jpg');
+    border: 150px inset transparent;
+    padding: 15px;
+    border-image: url("../images/jungle.jpg") 100 repeat;
+
+    padding: 200px;
+}
+
+div#content img{
+
+
+    float: contour;
+
+    height: auto;
+    margin: 0 0 15px 15px;
+    padding: 3px;
+    border: 3px solid blue;
+}
+
+footer {
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #73c41d;
+
+
+
+}

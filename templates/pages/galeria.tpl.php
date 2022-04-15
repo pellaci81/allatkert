@@ -37,7 +37,7 @@ closedir($olvaso);
     {
         ?>
         <div class="kep">
-            <a href="<?php echo $MAPPA.$fajl ?>">
+            <a href="<?php echo $MAPPA.$fajl ?>" >
                 <img src="<?php echo $MAPPA.$fajl ?>">
             </a>
             <p>Név:  <?php echo $fajl; ?></p>

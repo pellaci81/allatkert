@@ -50,6 +50,7 @@
                 enctype="multipart/form-data">
         <label>Első:
             <input type="file" name="elso" required>
+
         </label>
         <label>Második:
             <input type="file" name="masodik">
@@ -57,7 +58,8 @@
         <label>Harmadik:
             <input type="file" name="harmadik">
         </label>        
-        <input type="submit" name="kuld">
+        <input type="submit" class="btn btn-info" aria-label="Left Align" name="kuld">
+
       </form>    
 </body>
 </html>

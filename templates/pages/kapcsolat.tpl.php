@@ -5,16 +5,18 @@
 <h1>Kapcsolat</h1>
 <form name="kapcsolatsz" action="?oldal=kapcsolatsz" method="post">
     <div>
-        <label><input type="text" id="nev" name="nev" size="20" maxlength="40">Név (minimum 5 karakter): </label>
+        <label>Név:<br><input type="text" id="nev" name="nev" size="30" maxlength="40"></label>
         <br/>
-        <label><input type="text" id="email" name="email" size="30" maxlength="40">E-mail (kötelező): </label>
+        <label>E-mail:<br><input type="text" id="email" name="email" size="30" maxlength="40"></label>
         <br/>
-        <label><input type="text" id="targy" name="targy" size="30" maxlength="40">Tárgy (kötelező): </label>
+        <label>Tárgy: <br><input type="text" id="targy" name="targy" size="30" maxlength="40"></label>
         <br/>
-        <label> <textarea id="szoveg" name="szoveg" cols="40" rows="10"></textarea> Üzenet (kötelező): </label>
+        <label>Üzenet: <br>
+        <textarea id="szoveg" name="szoveg" cols="40" rows="10"></textarea>
+        </label>
         <br/>
-        <input id="kuld" type="submit" value="Küld">
-        <button onclick="ellenoriz();" type="button">Ellenőriz</button>
+        <input class="btn btn-primary" id="kuld" type="submit" value="Küld">
+        <button class="btn btn-primary" onclick="ellenoriz();" type="button">Ellenőriz</button>
     </div>
 </form>
 
