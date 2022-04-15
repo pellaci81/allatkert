@@ -38,6 +38,7 @@ $oldalak = array(
 	'bemutatkozas' => array('fajl' => 'bemutatkozas', 'szoveg' => 'Bemutatkozás', 'menun' => array(1,1)),
     'elerhetoseg' => array('fajl' => 'elerhetoseg', 'szoveg' => 'Elérhetőség', 'menun' => array(1,1)),
 	'kapcsolat' => array('fajl' => 'kapcsolat', 'szoveg' => 'Kapcsolat', 'menun' => array(1,1)),
+    'kapcsolatsz' => array('fajl' => 'kapcsolatsz', 'szoveg' => '', 'menun' => array(0,0)),
 	'galeria' => array('fajl' => 'galeria', 'szoveg' => 'Galéria', 'menun' => array(1,1)),
     'kepfeltoltes' => array('fajl' => 'kepfeltoltes', 'szoveg' => 'Kép feltöltése', 'menun' => array(0,1)),
     'tablazat' => array('fajl' => 'tablazat', 'szoveg' => 'Táblázat', 'menun' => array(1,1)),
