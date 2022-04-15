@@ -1,11 +1,17 @@
 <?php
-$dbn = 'mysql:host=localhost;dbname=allatkert';
+
 $database = array(
     'dsn' => 'mysql:host=localhost;dbname=allatkert',
     'uname' => 'root',
     'pwd' => ''
-
 );
+
+$MAPPA = './galeria/';
+$TIPUSOK = array ('.jpg', '.png');
+$MEDIATIPUSOK = array('image/jpeg', 'image/png');
+$DATUMFORMA = "Y.m.d. H:i";
+$MAXMERET = 500*1024;
+
 $ablakcim = array(
     'cim' => 'Nyíregyházi Állatpark Nonprofit Kft. (Sosto Zoo)',
 );
@@ -33,6 +39,7 @@ $oldalak = array(
     'elerhetoseg' => array('fajl' => 'elerhetoseg', 'szoveg' => 'Elérhetőség', 'menun' => array(1,1)),
 	'kapcsolat' => array('fajl' => 'kapcsolat', 'szoveg' => 'Kapcsolat', 'menun' => array(1,1)),
 	'galeria' => array('fajl' => 'galeria', 'szoveg' => 'Galéria', 'menun' => array(1,1)),
+    'kepfeltoltes' => array('fajl' => 'kepfeltoltes', 'szoveg' => 'Kép feltöltése', 'menun' => array(0,1)),
     'tablazat' => array('fajl' => 'tablazat', 'szoveg' => 'Táblázat', 'menun' => array(1,1)),
     'belepes' => array('fajl' => 'belepes', 'szoveg' => 'Belépés', 'menun' => array(1,0)),
     'kilepes' => array('fajl' => 'kilepes', 'szoveg' => 'Kilépés', 'menun' => array(0,1)),
