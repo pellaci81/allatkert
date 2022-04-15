@@ -1,6 +1,10 @@
 <?php
+
 	include('./includes/config.inc.php');
-	if (isset($_GET['oldal'])) {
+
+
+
+if (isset($_GET['oldal'])) {
 		$oldal = $_GET['oldal'];
 		if (isset($oldalak[$oldal]) && file_exists("./templates/pages/{$oldalak[$oldal]['fajl']}.tpl.php")) {
 			$keres = $oldalak[$oldal];
@@ -14,5 +18,5 @@
 		}
 	}
 	else $keres = $oldalak['/'];
-	include('./templates/index.tpl.php'); 
+	include('./templates/index.tpl.php');
 ?>

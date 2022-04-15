@@ -1,3 +1,8 @@
+<?php
+session_start();
+if(file_exists('./login/'.$keres['fajl'].'.php')) { include("./login/{$keres['fajl']}.php"); }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +22,10 @@
 
             <h1></h1>
 
-            <?php if (isset($fejlec['motto'])) { ?><h2><?= $fejlec['motto'] ?></h2><?php } ?>
+            <?php
+            if (isset($fejlec['motto'])) { ?><h2><?= $fejlec['motto'] ?></h2><?php }
+            if(isset($_SESSION['login'])) { ?>Bejlentkezve: <strong><?= $_SESSION['csn']." ".$_SESSION['un']." (".$_SESSION['login'].")" ?></strong><?php }
+            ?>
         </div>
 
 	</header>
@@ -30,18 +38,26 @@
             </div>
             <ul class="nav navbar-nav">
 
-                        <?php foreach ($oldalak as $url => $oldal) { ?>
-                            <li<?= (($oldal == $keres) ? ' class="active"' : '') ?>>
-                                <a href="<?= ($url == '/') ? '.' : ('?oldal=' . $url) ?>">
-                                    <?= $oldal['szoveg'] ?></a>
 
 
-                            </li>
-                        <?php } ?>
+                <?php foreach ($oldalak as $url => $oldal) { ?>
+                    <?php if(! isset($_SESSION['login']) && $oldal['menun'][0] || isset($_SESSION['login']) && $oldal['menun'][1]) { ?>
+                        <li<?= (($oldal == $keres) ? ' class="active"' : '') ?>>
+                            <a href="<?= ($url == '/') ? '.' : ('?oldal=' . $url) ?>">
+                                <?= $oldal['szoveg'] ?></a>
+                        </li>
+                    <?php } ?>
+                <?php } ?>
                             <li>
                                 <a href="https://www.sostozoo.hu/">https://www.sostozoo.hu/</a>
                             </li>
+
+
+
+
             </ul>
+
+
 
         </div>
     </nav>

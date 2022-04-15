@@ -1,4 +1,11 @@
 <?php
+$dbn = 'mysql:host=localhost;dbname=allatkert';
+$database = array(
+    'dsn' => 'mysql:host=localhost;dbname=allatkert',
+    'uname' => 'root',
+    'pwd' => ''
+
+);
 $ablakcim = array(
     'cim' => 'Nyíregyházi Állatpark Nonprofit Kft. (Sosto Zoo)',
 );
@@ -12,7 +19,7 @@ $fejlec = array(
 
 $video = array(
     'videoforras' => 'zoo_5mp.mp4',
-    'videoalt' => 'video'
+
 );
 
 $lablec = array(
@@ -21,14 +28,20 @@ $lablec = array(
 );
 
 $oldalak = array(
-	'/' => array('fajl' => 'cimlap', 'szoveg' => 'Főoldal'),
-	'bemutatkozas' => array('fajl' => 'bemutatkozas', 'szoveg' => 'Bemutatkozás'),
-    'elerhetoseg' => array('fajl' => 'elerhetoseg', 'szoveg' => 'Elérhetőség'),
-	'kapcsolat' => array('fajl' => 'kapcsolat', 'szoveg' => 'Kapcsolat'),
-	'galeria' => array('fajl' => 'galeria', 'szoveg' => 'Galéria'),
-    'tablazat' => array('fajl' => 'tablazat', 'szoveg' => 'Táblázat'),
-    'belepes' => array('fajl' => 'belepes', 'szoveg' => 'Belépés')
+	'/' => array('fajl' => 'cimlap', 'szoveg' => 'Főoldal', 'menun' => array(1,1)),
+	'bemutatkozas' => array('fajl' => 'bemutatkozas', 'szoveg' => 'Bemutatkozás', 'menun' => array(1,1)),
+    'elerhetoseg' => array('fajl' => 'elerhetoseg', 'szoveg' => 'Elérhetőség', 'menun' => array(1,1)),
+	'kapcsolat' => array('fajl' => 'kapcsolat', 'szoveg' => 'Kapcsolat', 'menun' => array(1,1)),
+	'galeria' => array('fajl' => 'galeria', 'szoveg' => 'Galéria', 'menun' => array(1,1)),
+    'tablazat' => array('fajl' => 'tablazat', 'szoveg' => 'Táblázat', 'menun' => array(1,1)),
+    'belepes' => array('fajl' => 'belepes', 'szoveg' => 'Belépés', 'menun' => array(1,0)),
+    'kilepes' => array('fajl' => 'kilepes', 'szoveg' => 'Kilépés', 'menun' => array(0,1)),
+    'belep' => array('fajl' => 'belep', 'szoveg' => '', 'menun' => array(0,0)),
+    'regisztral' => array('fajl' => 'regisztral', 'szoveg' => '', 'menun' => array(0,0))
+
 );
+
+
 
 
 
