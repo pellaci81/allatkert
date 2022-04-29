@@ -18,11 +18,7 @@ closedir($olvaso);
 <head>
     <meta charset="utf-8">
     <title>Galéria</title>
-    <style type="text/css">
-        div#galeria {margin: 0 auto; width: 820px;}
-        div.kep { display: inline-block; }
-        div.kep img { width: 200px; max-height: 130px;}
-    </style>
+
 </head>
 <body>
 <div id="galeria">

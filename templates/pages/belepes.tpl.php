@@ -1,4 +1,4 @@
-    <form action = "?oldal=belep" method = "post">
+    <form action = "?oldal=belep" method = "post"> <!-- ide küldi a belépés adatokat -> belep.tpl.php -->
       <fieldset>
         <legend>Bejlentkezés</legend>
         <br>
@@ -9,7 +9,7 @@
       </fieldset>
     </form>
     <h3>Regisztrálja magát, ha még nem felhasználó!</h3>
-    <form action = "?oldal=regisztral" method = "post">
+    <form action = "?oldal=regisztral" method = "post"> <!-- ide küldi a regisztrációs adatokat -> regisztral.tpl.php -->
       <fieldset>
         <legend>Regisztráció</legend>
         <br>

@@ -5,6 +5,11 @@ label {
 	line-height: 30px;
 
 	}
+
+label.upload {
+	display: inline-block;
+}
+
 label input, label textarea {
 	/*position: relative;
 	left: 200px;*/
@@ -12,6 +17,7 @@ label input, label textarea {
 	border: 2px red solid;
 	padding: 2px;
 	}
+
 textarea {
 	width: 350px;
 	}

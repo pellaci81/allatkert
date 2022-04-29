@@ -48,14 +48,14 @@
 ?>
     <form action="?oldal=kepfeltoltes" method="post"
                 enctype="multipart/form-data">
-        <label>Első:
+        <label class="upload" >Első:<br>
             <input type="file" name="elso" required>
 
         </label>
-        <label>Második:
+        <label class="upload" >Második:<br>
             <input type="file" name="masodik">
         </label>
-        <label>Harmadik:
+        <label class="upload" >Harmadik:<br>
             <input type="file" name="harmadik">
         </label>        
         <input type="submit" class="btn btn-info" aria-label="Left Align" name="kuld">

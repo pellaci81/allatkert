@@ -6,7 +6,7 @@ if(isset($_POST['felhasznalo']) && isset($_POST['jelszo'])) {
                         array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
         $dbh->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
         
-        // Felhsználó keresése
+        // Felhsználó keresése. 
         $sqlSelect = "select id, csaladi_nev, uto_nev from felhasznalok where bejelentkezes = :bejelentkezes and jelszo = sha1(:jelszo)";
         $sth = $dbh->prepare($sqlSelect);
         $sth->execute(array(':bejelentkezes' => $_POST['felhasznalo'], ':jelszo' => $_POST['jelszo']));
@@ -16,7 +16,7 @@ if(isset($_POST['felhasznalo']) && isset($_POST['jelszo'])) {
         }
     }
     catch (PDOException $e) {
-        $errormessage = "Hiba: ".$e->getMessage();
+        $errormessage = "Hiba: ".$e->getMessage(); // Ha nincs ilyen felhasználó, hiba
     }      
 }
 else {

@@ -3,7 +3,7 @@ try {
     $pdo = new PDO($database['dsn'], $database['uname'], $database['pwd'],
            array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
     $pdo->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
-    $utasitas = "Select id, date, name, user, email, text From email ORDER BY date ASC";
+    $utasitas = "Select id, date, name, user, email, text From email ORDER BY date DESC";
     $eredm = $pdo->query($utasitas);
 }
 catch (PDOException $e) {

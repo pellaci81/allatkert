@@ -1,6 +1,6 @@
 <?php
-session_start();
-if(file_exists('./login/'.$keres['fajl'].'.php')) { include("./login/{$keres['fajl']}.php"); }
+session_start(); //munkamenetet hoz létre, vagy folytatja az aktuálisat egy GET vagy POST kéréssel vagy cookie-n keresztül átadott munkamenet-azonosító alapján.
+if(file_exists('./login/'.$keres['fajl'].'.php')) { include("./login/{$keres['fajl']}.php"); }  //ellenőrzi hogy létezik e ( config.inc.php -> oldalak ) , ha igen beolvassa a fájlokat
 ?>
 
 <!DOCTYPE html>
@@ -11,10 +11,10 @@ if(file_exists('./login/'.$keres['fajl'].'.php')) { include("./login/{$keres['fa
 
 	<title><?= $ablakcim['cim'] . ( (isset($ablakcim['mottó'])) ? ('|' . $ablakcim['mottó']) : '' ) ?></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="icon" type="image/png" href="https://www.sostozoo.hu/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://www.sostozoo.hu/favicon-32x32.png" sizes="32x32"> <!-- oldal ikon -->
     <link rel="stylesheet" href="./styles/stilus.css" type="text/css">
     <?php if(file_exists('./styles/'.$keres['fajl'].'.css')) { ?><link rel="stylesheet" href="./styles/<?= $keres['fajl']?>.css" type="text/css"><?php } ?>
-
+    <!-- betölti a styles mappából a css fájlokat -->
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -29,6 +29,9 @@ if(file_exists('./login/'.$keres['fajl'].'.php')) { include("./login/{$keres['fa
 
             <?php
             if (isset($fejlec['motto'])) { ?><h2><?= $fejlec['motto'] ?></h2><?php }
+
+            // Ha be van jelentkezve - if(isset($_SESSION['login']))
+            // kiírja a header -ben a teljes nevet és a felhasználónevet (6. e. feladat)
             if(isset($_SESSION['login'])) { ?>Bejlentkezve: <strong><?= $_SESSION['csn']." ".$_SESSION['un']." (".$_SESSION['login'].")" ?></strong><?php }
             ?>
 
@@ -47,7 +50,8 @@ if(file_exists('./login/'.$keres['fajl'].'.php')) { include("./login/{$keres['fa
             <ul class="navbar-nav">
 
 
-
+                <!-- ez a ciklus készíti el a menüt -->
+                
                 <?php foreach ($oldalak as $url => $oldal) { ?>
                     <?php if(! isset($_SESSION['login']) && $oldal['menun'][0] || isset($_SESSION['login']) && $oldal['menun'][1]) { ?>
                         <li class="nav-item" <?= (($oldal == $keres) ? ' class="active"' : '') ?>>
